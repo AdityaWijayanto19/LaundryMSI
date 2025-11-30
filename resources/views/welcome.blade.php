@@ -129,7 +129,7 @@
 
             <!-- Login Button -->
             <div class="hidden md:flex ml-4">
-                <a href="/dashboard" onclick="alert('Demo: Mengarahkan ke Dashboard Admin')"
+                <a href="{{ route('login') }}"
                     class="text-brand-600 border border-brand-200 bg-white hover:bg-brand-50 hover:border-brand-500 font-medium rounded-full text-sm px-5 py-2.5 transition-all shadow-sm">
                     Login Admin
                 </a>
@@ -145,7 +145,7 @@
                 <li><a href="#pricing" onclick="toggleMenu()" class="block text-slate-600">Harga</a></li>
                 <li><a href="#calculator" onclick="toggleMenu()" class="block text-slate-600">Kalkulator</a></li>
                 <li>
-                    <a href="/dashboard"
+                    <a href="{{ route('login') }}"
                         class="block w-full text-center mt-4 text-brand-600 border border-brand-200 rounded-lg py-2 hover:bg-brand-50">
                         Login Admin
                     </a>
