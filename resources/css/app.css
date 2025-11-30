@@ -5,36 +5,42 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
+/* THEME: mirip dengan tailwind.config yang lama */
 @theme {
-    /* Definisikan Font Family */
+    /* Font family default */
     --font-sans: "Inter", "ui-sans-serif", "system-ui", "sans-serif";
 
-    /* Palet Warna Utama (Biru Dodger - #1E90FF) */
-    --color-brand-50: #f0f9ff;
-    --color-brand-100: #e0f2fe;
-    --color-brand-200: #bae6fd;
-    --color-brand-300: #7dd3fc;
-    --color-brand-400: #38bdf8;
-    --color-brand-500: #1E90FF; /* Warna Utama */
-    --color-brand-600: #0284c7;
-    --color-brand-700: #0369a1;
-    --color-brand-900: #0c4a6e;
+    /* BRAND (biru) – disesuaikan dari script lama kamu */
+    --color-brand-50: #eff6ff;
+    --color-brand-100: #dbeafe;
+    --color-brand-200: #bfdbfe;
+    --color-brand-500: #1E90FF;
+    --color-brand-600: #0077E6;
+    --color-brand-700: #1d4ed8;
+    --color-brand-900: #1e3a8a;
 
-    /* Warna Aksen (Soft Orange - #FFD166) */
-    --color-accent: #FFD166;
-    --color-accent-hover: #ffc107;
-    
-    /* Background Khusus */
+    /* ACCENT (kuning/oranye) */
+    --color-accent-50: #fffbeb;
+    --color-accent-100: #fef3c7;
+    --color-accent-400: #FFD166;
+    --color-accent-500: #f59e0b;
+
+    /* Tambahan palet slate kalau mau */
     --color-slate-50: #f8fafc;
     --color-slate-900: #0f172a;
 }
 
-/* Custom Utilities (Jika Perlu) */
+/* BASE STYLE GLOBAL */
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Utilities & custom classes */
 @layer utilities {
     .text-shadow {
         text-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-    
+
     /* Hide scrollbar for clean UI */
     .no-scrollbar::-webkit-scrollbar {
         display: none;
@@ -42,5 +48,26 @@
     .no-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;
+    }
+
+    /* Glass nav */
+    .glass-nav {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+    }
+
+    /* Marquee animation */
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+
+    .animate-marquee {
+        animation: marquee 18s linear infinite;
+    }
+
+    .animate-marquee2 {
+        animation: marquee 18s linear infinite;
+        animation-delay: 9s;
     }
 }
