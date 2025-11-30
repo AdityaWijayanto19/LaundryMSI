@@ -6,6 +6,41 @@
 @source '../**/*.js';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    /* Definisikan Font Family */
+    --font-sans: "Inter", "ui-sans-serif", "system-ui", "sans-serif";
+
+    /* Palet Warna Utama (Biru Dodger - #1E90FF) */
+    --color-brand-50: #f0f9ff;
+    --color-brand-100: #e0f2fe;
+    --color-brand-200: #bae6fd;
+    --color-brand-300: #7dd3fc;
+    --color-brand-400: #38bdf8;
+    --color-brand-500: #1E90FF; /* Warna Utama */
+    --color-brand-600: #0284c7;
+    --color-brand-700: #0369a1;
+    --color-brand-900: #0c4a6e;
+
+    /* Warna Aksen (Soft Orange - #FFD166) */
+    --color-accent: #FFD166;
+    --color-accent-hover: #ffc107;
+    
+    /* Background Khusus */
+    --color-slate-50: #f8fafc;
+    --color-slate-900: #0f172a;
+}
+
+/* Custom Utilities (Jika Perlu) */
+@layer utilities {
+    .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    /* Hide scrollbar for clean UI */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
 }
